@@ -1,0 +1,4 @@
+CREATE TABLE `categories` ( `category_id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, `category_name` TEXT NOT NULL UNIQUE );
+CREATE TABLE "feed_entries" ( `entry_id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, `feed_id` INTEGER NOT NULL, `entry_title` TEXT, `entry_date` TEXT, `entry_author_name` TEXT, `entry_content` TEXT, `entry_summary` TEXT, `entry_author_email` TEXT, `last_viewed_date` TEXT, `saved` INTEGER NOT NULL DEFAULT 0 );
+CREATE TABLE "feed_entry_categories" ( `category_id` INTEGER NOT NULL, `entry_id` INTEGER NOT NULL );
+CREATE TABLE "feeds" ( `feed_id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, `feed_name` TEXT NOT NULL, `feed_url` TEXT NOT NULL UNIQUE, `source_last_updated` TEXT NOT NULL, `feed_description` TEXT, `local_last_updated` TEXT, `is_active` INTEGER NOT NULL DEFAULT 1 );
