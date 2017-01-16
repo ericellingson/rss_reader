@@ -17,7 +17,14 @@ $xml = '<?xml version="1.0" encoding="UTF-8" ?>
   <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
  </item>
 
+  <item>
+	  <title>Example entry</title>
+	  <description>Here is some text containing an interesting description.</description>
+	  <link>http://www.example.com/blog/post/1</link>
+	  <guid isPermaLink="true">8bd204c6-1655-4c27-aeee-53f933c5395f</guid>
+	  <pubDate>Sun, 05 Sep 2009 16:20:00 +0000</pubDate>
+	</item>
 </channel>
 </rss>';
-echo $xml;
+echo "<pre>" . htmlspecialchars($xml) . "</pre>";
 exit();

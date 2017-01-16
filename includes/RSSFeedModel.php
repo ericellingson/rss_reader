@@ -42,6 +42,11 @@ class RSSFeedModel extends SQLite3 {
 	public function getFeedLastUpdated($feed_id) {
 
 	}
+	public function getEntryId($entry) {
+		$sql = "
+
+		";
+	}
 	public function addFeed($feed) {
 		$feed_name = trim($feed->feed_name);
 		$feed_url = trim($feed->feed_url);

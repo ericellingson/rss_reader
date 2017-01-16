@@ -27,7 +27,6 @@ class RSSReader {
 		$dbFilePath = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . "data" . DIRECTORY_SEPARATOR . "rss.db3";
 		echo "$dbFilePath";
 	}
-
 }
 
 $r = new RSSReader;
