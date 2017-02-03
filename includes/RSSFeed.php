@@ -36,8 +36,6 @@ class RSSFeed {
 
 		$entries = $this->getEntries($this->feed_contents["xml"]);
 
-
-
 		echo $this->feed_name . "<br>" . $this->feed_description . "<br>" . $this->source_last_updated;
 		exit();
 
@@ -68,9 +66,10 @@ class RSSFeed {
 		}
 	}
 	private function getAtomEntries($xml) {
-
+		die("getAtomEntries");
 	}
 	private function getRSSEntries($xml) {
+		// die("getRSSEntries");
 		$xml = $xml->channel;
 		$entries = array();
 		// echo "<pre>" . print_r(gettype($xml->item), true) . "</pre>";
@@ -83,7 +82,8 @@ class RSSFeed {
 		// echo "<pre>" . print_r(get_object_vars($xml), true) . "</pre>";
 
 		// echo gettype($xml->entry);
-		exit();
+		// exit();
+		return $entries;
 	}
 	private function getFeedContents() {
 		$xml_str = file_get_contents($this->feed_url);
